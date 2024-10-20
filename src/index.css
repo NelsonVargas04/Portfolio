@@ -1,0 +1,72 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.dark {
+  @apply bg-black text-gray-100;
+}
+
+/* Estilos adicionales para mejorar la legibilidad */
+.dark .bg-white {
+  @apply bg-gray-800;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-800 {
+  @apply text-gray-200;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-out;
+}
+
+/* Estilos para secciones */
+section {
+  @apply animate-fadeIn;
+}
+
+/* Estilos para proyectos */
+.project-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+/* Estilos para tecnologías */
+.tech-tag {
+  @apply transition-transform hover:scale-110;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
