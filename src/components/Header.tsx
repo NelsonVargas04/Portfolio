@@ -1,16 +1,16 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
-import { Linkedin, Github, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail, FileText } from 'lucide-react';
 
 const Header: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
   return (
-    <header className="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-black text-white">
+    <header className={`h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 to-black text-white transition-colors duration-300`}>
       <div className="text-center">
-        <h1 className="text-6xl font-bold mb-4 animate-scaleIn">Nelson Vargas</h1>
+        <h1 className="text-9xl font-bold mb-4 animate-scaleIn">Nelson Vargas</h1>
         <p className="text-3xl text-blue-400 mb-8 animate-slideIn">{t.role}</p>
         <div className="flex justify-center space-x-6 animate-fadeIn">
           <a href="https://www.linkedin.com/in/nelson-vargas-470893254/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-300 transition-colors">
@@ -21,6 +21,9 @@ const Header: React.FC = () => {
           </a>
           <a href="mailto:varnelson15.@gmail.com" className="text-white hover:text-blue-300 transition-colors">
             <Mail className="w-8 h-8" />
+          </a>
+          <a href="/Nelson_Vargas_CV.pdf" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-300 transition-colors">
+            <FileText className="w-8 h-8" />
           </a>
         </div>
       </div>

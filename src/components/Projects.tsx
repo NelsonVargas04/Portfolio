@@ -1,9 +1,25 @@
 import React, { useState } from 'react';
-import { Github, Globe } from 'lucide-react';
+import { Github, Globe, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
 
-const projects = [
+interface Project {
+  title: string;
+  description: {
+    es: string;
+    en: string;
+  };
+  fullDescription: {
+    es: string;
+    en: string;
+  };
+  image: string;
+  github: string;
+  live?: string;
+  technologies: string[];
+}
+
+const projectsData: Project[] = [
   {
     title: 'E-commerce Platform',
     description: {
@@ -46,29 +62,35 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
     github: 'https://github.com/nelsonvargas/weather-forecast-dashboard',
     live: 'https://weather-forecast-dashboard-demo.netlify.app',
-    technologies: ['Angular', 'TypeScript', 'RxJS', 'OpenWeatherMap API']
+    technologies: ['Angular', 'TypeScript', 'RxJS', ]
   },
 ];
 
 const Projects: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  const [expandedProject, setExpandedProject] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
-  const toggleProject = (index: number) => {
-    setExpandedProject(expandedProject === index ? null : index);
+  const closeModal = () => {
+    setSelectedProject(null);
   };
 
   return (
     <section id="projects" className="mb-20">
       <h2 className="text-3xl font-semibold mb-6 text-blue-400">{t.projectsTitle}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <div key={index} className={`bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-300 ${expandedProject === index ? 'col-span-full' : ''}`}>
+        {projectsData.map((project, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer"
+            onClick={() => setSelectedProject(index)}
+          >
             <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
-              <p className="text-gray-300 mb-4">{expandedProject === index ? project.fullDescription[language] : project.description[language]}</p>
+              <p className="text-gray-300 mb-4 h-16 overflow-hidden text-ellipsis">
+                {project.description[language]}
+              </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, techIndex) => (
                   <span key={techIndex} className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs">
@@ -89,17 +111,64 @@ const Projects: React.FC = () => {
                     </a>
                   )}
                 </div>
-                <button
-                  onClick={() => toggleProject(index)}
-                  className="text-blue-400 hover:text-blue-300"
-                >
-                  {expandedProject === index ? 'Less' : 'More'}
-                </button>
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      {selectedProject !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-gray-800 rounded-lg max-w-2xl w-full p-6 relative animate-scaleIn">
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              {projectsData[selectedProject].title}
+            </h3>
+            <img
+              src={projectsData[selectedProject].image}
+              alt={projectsData[selectedProject].title}
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="text-gray-300 mb-6">
+              {projectsData[selectedProject].fullDescription[language]}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {projectsData[selectedProject].technologies.map((tech, index) => (
+                <span key={index} className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="flex space-x-4">
+              <a
+                href={projectsData[selectedProject].github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-blue-400 hover:text-blue-300"
+              >
+                <Github className="w-5 h-5 mr-1" />
+                GitHub
+              </a>
+              {projectsData[selectedProject].live && (
+                <a
+                  href={projectsData[selectedProject].live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-green-400 hover:text-green-300"
+                >
+                  <Globe className="w-5 h-5 mr-1" />
+                  Live Demo
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
