@@ -16,10 +16,12 @@ const technologies = [
   { name: 'PostgreSQL', color: 'bg-blue-800' },
   { name: 'GraphQL', color: 'bg-pink-600' },
   { name: 'Scrum', color: 'bg-green-600' },
-  { name: 'React Suite', color: 'bg-cyan-600' },
   { name: 'Less', color: 'bg-indigo-600' },
-  { name: 'TanStack Query', color: 'bg-red-500' },
   { name: 'Vite', color: 'bg-purple-600' },
+  { name: 'React Suite', color: 'bg-cyan-600' },
+  
+  { name: 'TanStack Query', color: 'bg-red-500' },
+  
   { name: 'Git', color: 'bg-orange-600' },
   { name: 'Firebase', color: 'bg-yellow-600' },
   { name: 'Bootstrap', color: 'bg-purple-700' },
@@ -35,11 +37,11 @@ const Technologies: React.FC = () => {
   return (
     <section id="technologies" className="mb-20">
       <h2 className="text-3xl font-semibold mb-6 text-blue-400">{t.technologiesTitle}</h2>
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-3"> {/* Ajusta el gap para más espacio entre etiquetas */}
         {technologies.map((tech, index) => (
           <span
             key={index}
-            className={`${tech.color} text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md transition-transform hover:scale-105`}
+            className={`${tech.color} text-white px-3 py-1.5 rounded-full text-base font-semibold shadow-md transition-transform hover:scale-105`} // Ajusta el padding y el tamaño del texto
           >
             {tech.name}
           </span>

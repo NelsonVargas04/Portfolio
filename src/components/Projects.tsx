@@ -62,7 +62,7 @@ const projectsData: Project[] = [
     image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
     github: 'https://github.com/nelsonvargas/weather-forecast-dashboard',
     live: 'https://weather-forecast-dashboard-demo.netlify.app',
-    technologies: ['Angular', 'TypeScript', 'RxJS', ]
+    technologies: ['Angular', 'TypeScript', 'RxJS', 'OpenWeatherMap API']
   },
 ];
 
@@ -88,8 +88,8 @@ const Projects: React.FC = () => {
             <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
-              <p className="text-gray-300 mb-4 h-16 overflow-hidden text-ellipsis">
-                {project.description[language]}
+              <p className="text-gray-300 mb-4" style={{ maxHeight: '50px', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
+                {project.description[language]}...
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, techIndex) => (
