@@ -19,9 +19,7 @@ const technologies = [
   { name: 'Less', color: 'bg-indigo-600' },
   { name: 'Vite', color: 'bg-purple-600' },
   { name: 'React Suite', color: 'bg-cyan-600' },
-  
   { name: 'TanStack Query', color: 'bg-red-500' },
-  
   { name: 'Git', color: 'bg-orange-600' },
   { name: 'Firebase', color: 'bg-yellow-600' },
   { name: 'Bootstrap', color: 'bg-purple-700' },

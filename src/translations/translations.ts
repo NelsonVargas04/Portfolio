@@ -34,6 +34,7 @@ export const translations = {
       }
     ],
     projectsTitle: "Proyectos",
+    certificatesTitle: "Certificados",
     technologiesTitle: "Tecnologías y Herramientas",
     contactTitle: "Contacto",
     contactText: "¿Interesado en colaborar o tienes alguna pregunta? No dudes en contactarme a través de cualquiera de estos medios:"
@@ -73,6 +74,7 @@ export const translations = {
       }
     ],
     projectsTitle: "Projects",
+    certificatesTitle: "Certificates",
     technologiesTitle: "Technologies and Tools",
     contactTitle: "Contact",
     contactText: "Interested in collaborating or have any questions? Feel free to contact me through any of these channels:"

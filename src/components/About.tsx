@@ -2,6 +2,7 @@ import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
 
+
 const About: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
@@ -14,7 +15,7 @@ const About: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center">
         <div className="md:w-1/3 mb-6 md:mb-0">
           <img
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
+            src="src/components/img/perfil.jpeg"
             alt="Nelson Vargas"
             className="w-96 h-96 rounded-full object-cover border-4 border-blue-400 shadow-lg"
           />
