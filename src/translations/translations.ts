@@ -33,6 +33,7 @@ export const translations = {
         ]
       }
     ],
+    experienceDuration: "2 años de Experiencia",
     projectsTitle: "Proyectos",
     certificatesTitle: "Certificados",
     technologiesTitle: "Tecnologías y Herramientas",
@@ -73,6 +74,7 @@ export const translations = {
         ]
       }
     ],
+    experienceDuration: "2 years of Experience",
     projectsTitle: "Projects",
     certificatesTitle: "Certificates",
     technologiesTitle: "Technologies and Tools",
