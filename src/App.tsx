@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import WorkExperience from './components/WorkExperience';
@@ -60,7 +60,7 @@ function AppContent() {
         </div>
       </div>
       <Header />
-      <main className={`max-w-7xl mx-auto px-6 py-8 ${darkMode ? 'bg-black' : 'bg-white'}`}>
+      <main className={`max-w-7xl mx-auto px-4 py-4 ${darkMode ? 'bg-black' : 'bg-white'}`}>
         <About />
         <WorkExperience />
         <Projects />

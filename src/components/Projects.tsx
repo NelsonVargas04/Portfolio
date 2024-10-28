@@ -84,9 +84,8 @@ const Projects: React.FC = () => {
         <h2 className="text-4xl font-semibold text-blue-400">
           {t.projectsTitle}
         </h2>
-        
       </div>
-
+  
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projectsData.map((project, index) => (
           <div
@@ -120,7 +119,7 @@ const Projects: React.FC = () => {
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs"
+                    className="bg-blue-600 text-white px-3 py-2 rounded-full text-sm"
                   >
                     {tech}
                   </span>
@@ -154,10 +153,10 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
-
+  
       {selectedProject !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-gray-800 rounded-lg max-w-2xl w-full p-6 relative animate-scaleIn">
+          <div className="bg-gray-800 rounded-lg max-w-6xl w-full p-12 relative animate-scaleIn">
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-gray-400 hover:text-white"
@@ -170,7 +169,7 @@ const Projects: React.FC = () => {
             <img
               src={projectsData[selectedProject].image}
               alt={projectsData[selectedProject].title}
-              className="w-full h-64 object-cover rounded-lg mb-4"
+              className="w-full h-[600px] object-cover rounded-lg mb-4"
             />
             <p className="text-gray-300 mb-6">
               {projectsData[selectedProject].fullDescription[language]}
@@ -179,7 +178,7 @@ const Projects: React.FC = () => {
               {projectsData[selectedProject].technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-full text-base"
                 >
                   {tech}
                 </span>
@@ -190,9 +189,9 @@ const Projects: React.FC = () => {
                 href={projectsData[selectedProject].github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-blue-400 hover:text-blue-300"
+                className="flex items-center text-blue-400 hover:text-blue-300 text-lg"
               >
-                <Github className="w-5 h-5 mr-1" />
+                <Github className="w-6 h-6 mr-1" />
                 GitHub
               </a>
               {projectsData[selectedProject].live && (
@@ -200,9 +199,9 @@ const Projects: React.FC = () => {
                   href={projectsData[selectedProject].live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-green-400 hover:text-green-300"
+                  className="flex items-center text-green-400 hover:text-green-300 text-lg"
                 >
-                  <Globe className="w-5 h-5 mr-1" />
+                  <Globe className="w-6 h-6 mr-1" />
                   Live Demo
                 </a>
               )}
