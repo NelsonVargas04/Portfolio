@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { X } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { translations } from '../translations/translations';
+import React, { useState } from "react";
+import { X } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
+import { translations } from "../translations/translations";
 
 interface Certificate {
   title: string;
@@ -10,23 +10,28 @@ interface Certificate {
 
 const certificatesData: Certificate[] = [
   {
-    title: 'Full Stack Web Developer - Henry Bootcamp',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+    title: "Full Stack Web Developer - Henry Bootcamp",
+    image:
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
   },
   {
-    title: 'React Native Specialist - Udemy',
-    image: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+    title: "React Native Specialist - Udemy",
+    image:
+      "https://images.unsplash.com/photo-1526498460520-4c246339dccb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
   },
   {
-    title: 'Advanced JavaScript - Platzi',
-    image: 'https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-  }
+    title: "Advanced JavaScript - Platzi",
+    image:
+      "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+  },
 ];
 
 const Certificates: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  const [selectedCertificate, setSelectedCertificate] = useState<number | null>(null);
+  const [selectedCertificate, setSelectedCertificate] = useState<number | null>(
+    null
+  );
 
   const closeModal = () => {
     setSelectedCertificate(null);
@@ -34,7 +39,12 @@ const Certificates: React.FC = () => {
 
   return (
     <section id="certificates" className="mb-20">
-      <h2 className="text-3xl font-semibold mb-6 text-blue-400">{t.certificatesTitle}</h2>
+      <div className="relative inline-flex items-center gap-4 mb-8 bg-gradient-to-r from-purple-500/20 to-transparent p-6 rounded-lg">
+        <h2 className="text-4xl font-semibold text-blue-400">
+          {t.certificatesTitle}
+        </h2>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {certificatesData.map((certificate, index) => (
           <div
@@ -48,7 +58,9 @@ const Certificates: React.FC = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-white">{certificate.title}</h3>
+              <h3 className="text-xl font-semibold text-white">
+                {certificate.title}
+              </h3>
             </div>
           </div>
         ))}
