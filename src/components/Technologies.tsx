@@ -28,7 +28,7 @@ const technologies = [
   { name: "Microsoft Word", color: "bg-blue-700" },
 ];
 
-const Technologies: React.FC = () => {
+const Technologies: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
   const { language } = useLanguage();
   const t = translations[language];
 

@@ -69,7 +69,7 @@ const projectsData: Project[] = [
   },
 ];
 
-const Projects: React.FC = () => {
+const Projects: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
   const { language } = useLanguage();
   const t = translations[language];
   const [selectedProject, setSelectedProject] = useState<number | null>(null);

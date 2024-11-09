@@ -10,7 +10,7 @@ interface Certificate {
 
 const certificatesData: Certificate[] = [
   {
-    title: "Full Stack Web Developer - Henry Bootcamp",
+    title: "Full Stack Web Developer - Henry",
     image:
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
   },
@@ -26,7 +26,7 @@ const certificatesData: Certificate[] = [
   },
 ];
 
-const Certificates: React.FC = () => {
+const Certificates: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
   const { language } = useLanguage();
   const t = translations[language];
   const [selectedCertificate, setSelectedCertificate] = useState<number | null>(

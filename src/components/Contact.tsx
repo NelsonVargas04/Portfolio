@@ -3,7 +3,7 @@ import { Mail, Linkedin, Github } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
 
-const Contact: React.FC = () => {
+const Contact: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
   const { language } = useLanguage();
   const t = translations[language];
 
@@ -14,33 +14,33 @@ const Contact: React.FC = () => {
           {t.contactTitle}
         </h2>
       </div>
-
-      <div className="bg-gray-800 rounded-lg shadow-md p-6">
-        <p className="text-gray-300 mb-6">{t.contactText}</p>
-        <div className="flex flex-col space-y-4">
+  
+      <div className="bg-gray-800 rounded-lg shadow-md p-10">
+        <p className="text-gray-300 mb-6 text-lg">{t.contactText}</p>
+        <div className="flex flex-col space-y-6">
           <a
             href="mailto:varnelson15.@gmail.com"
-            className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+            className="flex items-center text-blue-400 hover:text-blue-300 transition-colors text-lg"
           >
-            <Mail className="w-6 h-6 mr-2" />
+            <Mail className="w-8 h-8 mr-2" />
             varnelson15.@gmail.com
           </a>
           <a
             href="https://www.linkedin.com/in/nelson-vargas-470893254/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+            className="flex items-center text-blue-400 hover:text-blue-300 transition-colors text-lg"
           >
-            <Linkedin className="w-6 h-6 mr-2" />
+            <Linkedin className="w-8 h-8 mr-2" />
             LinkedIn
           </a>
           <a
             href="https://github.com/NelsonVargas04"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+            className="flex items-center text-blue-400 hover:text-blue-300 transition-colors text-lg"
           >
-            <Github className="w-6 h-6 mr-2" />
+            <Github className="w-8 h-8 mr-2" />
             GitHub
           </a>
         </div>

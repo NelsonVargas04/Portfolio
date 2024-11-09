@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
 import { ArrowUpRight } from 'lucide-react';
 
-const WorkExperience: React.FC = () => {
+const WorkExperience: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
   const { language } = useLanguage();
   const t = translations[language];
 
