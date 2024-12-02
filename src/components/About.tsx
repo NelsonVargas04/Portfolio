@@ -22,7 +22,7 @@ const About: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
       transition={{ duration: 0.75 }}
     >
      <div className="relative inline-flex items-center gap-4 mb-8 bg-gradient-to-r from-purple-500/20 to-transparent p-6 rounded-lg">
-  <h2 className={`text-5xl font-semibold ${darkMode ? 'text-[#00b4d8]' : 'text-[#1D2D44]'}`}>
+  <h2 className={`text-4xl font-semibold ${darkMode ? 'text-[#00b4d8]' : 'text-[#1D2D44]'}`}>
     {t.aboutTitle}
   </h2>
 </div>

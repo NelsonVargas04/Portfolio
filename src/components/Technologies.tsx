@@ -34,17 +34,27 @@ const Technologies: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
 
   return (
     <section id="technologies" className="mb-20">
+      {/* Título de la sección */}
       <div className="relative inline-flex items-center gap-4 mb-8 bg-gradient-to-r from-purple-500/20 to-transparent p-6 rounded-lg">
-        <h2 className="text-3xl font-semibold  text-blue-400">
+        <h2
+          className={`text-4xl font-semibold ${
+            darkMode ? "text-[#00b4d8]" : "text-[#1D2D44]"
+          }`}
+        >
           {t.technologiesTitle}
         </h2>
       </div>
 
+      {/* Lista de tecnologías */}
       <div className="flex flex-wrap gap-3">
         {technologies.map((tech, index) => (
           <span
             key={index}
-            className={`${tech.color} text-white px-3 py-1.5 rounded-full text-base font-semibold shadow-md transition-transform hover:scale-105`}
+            className={`${
+              tech.color
+            } text-lg text-white px-4 py-2 rounded-full text-base font-semibold shadow-md transition-transform transform-gpu hover:scale-105 ${
+              darkMode ? "shadow-gray-800" : "shadow-gray-400"
+            }`}
           >
             {tech.name}
           </span>

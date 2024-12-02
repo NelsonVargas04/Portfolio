@@ -13,16 +13,16 @@ const WorkExperience: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
       className={`mb-20 ${darkMode ? "text-[#edf6f9]" : "text-[#0D1321]"} transition-colors duration-300`}
     >
       <div className="relative inline-flex items-center gap-4 mb-8 bg-gradient-to-r from-purple-500/20 to-transparent p-6 rounded-lg">
-        <h2 className={`text-5xl font-semibold ${darkMode ? "text-[#00b4d8]" : "text-[#1D2D44]"}`}>
+        <h2 className={`text-4xl font-semibold ${darkMode ? "text-[#00b4d8]" : "text-[#1D2D44]"}`}>
           {t.workExperienceTitle}
         </h2>
         <div className="flex items-center gap-2">
           <ArrowUpRight
             className={`w-8 h-8 ${darkMode ? "text-[#00b4d8]" : "text-[#1D2D44]"} animate-pulse`}
           />
-          <span className={`font-medium text-lg ${darkMode ? "text-[#edf6f9]" : "text-[#0D1321]"}`}>
+          <h3 className={`text-2xl  ${darkMode ? "text-[#edf6f9]" : "text-[#0D1321]"}`}>
             {t.experienceDuration}
-          </span>
+          </h3>
         </div>
       </div>
 
