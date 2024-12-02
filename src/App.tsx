@@ -65,7 +65,7 @@ function AppContent() {
         <About  darkMode ={darkMode}/>
         <WorkExperience darkMode ={darkMode} />
         <Projects darkMode ={darkMode} />
-        <Certificates darkMode ={darkMode} />
+        {/* <Certificates darkMode ={darkMode} /> */}
         <Technologies darkMode={darkMode} />
         <Contact darkMode={darkMode} />
       </main>
