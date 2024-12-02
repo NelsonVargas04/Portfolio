@@ -21,22 +21,24 @@ const About: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.75 }}
     >
-      <h2 className={`text-5xl font-semibold mb-6 ${darkMode ? 'text-[#00b4d8]' : 'text-[#1D2D44]'}`}>
-        {t.aboutTitle}
-      </h2>
+     <div className="relative inline-flex items-center gap-4 mb-8 bg-gradient-to-r from-purple-500/20 to-transparent p-6 rounded-lg">
+  <h2 className={`text-5xl font-semibold ${darkMode ? 'text-[#00b4d8]' : 'text-[#1D2D44]'}`}>
+    {t.aboutTitle}
+  </h2>
+</div>
       <div className="flex flex-col md:flex-row items-center">
         <div className="md:w-1/3 mb-6 md:mb-0">
           <img
             src="src/components/img/perfil.jpeg"
             alt="Nelson Vargas"
-            className="w-96 h-96 object-cover border-4 border-[#3E5C76] shadow-lg rounded-lg"
+            className="w-96 h-112 object-cover border-4 border-[#3E5C76] shadow-lg rounded-lg"
           />
         </div>
         <div className="md:w-2/3 md:pl-8">
           {t.aboutContent.map((paragraph, index) => (
             <p
               key={index}
-              className={`mb-4 ${darkMode ? 'text-[#edf6f9]' : 'text-[#3E5C76]'} ${
+              className={`mb-4 ${darkMode ? 'text-[#edf6f9]' : 'text-[#0D1321]'} ${
                 index < t.aboutContent.length - 1 ? "mb-4" : ""
               }`}
               style={{ fontSize: "1.375rem" }}

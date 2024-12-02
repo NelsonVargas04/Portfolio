@@ -4,9 +4,10 @@ export const translations = {
     role: "Desarrollador de Software Profesional",
     aboutTitle: "Sobre Mí",
     aboutContent: [
-      "Profesional en el campo de la programación, con habilidades en lenguajes como Java, Python, C++ y JavaScript. Experiencia en el desarrollo de aplicaciones web y móviles, así como en el manejo de bases de datos SQL y NoSQL.",
-      "Conocimientos en frameworks como Angular y React. Capacidad para trabajar en equipo, resolver problemas de manera eficiente y adaptarme a nuevos desafíos tecnológicos.",
-      "Apasionado por la tecnología y el aprendizaje continuo. Dispuesto a aportar mis conocimientos y habilidades en un ambiente de trabajo dinámico y colaborativo."
+     "Soy un desarrollador Frontend con sólida experiencia en lenguajes como JavaScript y Python, especializado en el desarrollo de aplicaciones web y móviles, así como en el manejo de bases de datos SQL y NoSQL.",
+      "Mi trayectoria incluye el uso de frameworks como React, donde he trabajado en proyectos que combinan funcionalidad, diseño y rendimiento.",
+      "Me destaco por mi capacidad para resolver problemas de forma eficiente, adaptándome rápidamente a nuevos desafíos tecnológicos y colaborando en equipo para alcanzar objetivos comunes.",
+      "Soy una persona social, alegre y apasionada por la tecnología, con un interés genuino en el aprendizaje continuo. Los retos me motivan, ya que veo en ellos la oportunidad de crecer profesionalmente y aportar un valor significativo a los proyectos en los que participo."
     ],
     workExperienceTitle: "Experiencia Laboral",
     workExperience: [
@@ -45,9 +46,10 @@ export const translations = {
     role: "Professional Software Developer",
     aboutTitle: "About Me",
     aboutContent: [
-      "Professional in the field of programming, with skills in languages such as Java, Python, C++, and JavaScript. Experience in developing web and mobile applications, as well as managing SQL and NoSQL databases.",
-      "Knowledge in frameworks like Angular and React. Ability to work in a team, efficiently solve problems, and adapt to new technological challenges.",
-      "Passionate about technology and continuous learning. Willing to contribute my knowledge and skills in a dynamic and collaborative work environment."
+      "I am a Frontend Developer with solid experience in languages like JavaScript and Python, specializing in the development of web and mobile applications, as well as managing SQL and NoSQL databases.",
+      "My experience includes using frameworks like React, where I have worked on projects that combine functionality, design, and performance.",
+      "I stand out for my ability to solve problems efficiently, quickly adapting to new technological challenges, and collaborating with teams to achieve common goals.",
+      "I am a social, cheerful, and technology-driven person, with a genuine interest in continuous learning. Challenges motivate me, as I see them as opportunities to grow professionally and add significant value to the projects I participate in."
     ],
     workExperienceTitle: "Work Experience",
     workExperience: [
