@@ -46,10 +46,10 @@ const projectsData: Project[] = [
       es: "Herramienta interactiva para evaluar la fortaleza de contraseñas y generar nuevas claves seguras, incluyendo contraseñas aleatorias, fáciles de recordar y PINs, con opciones personalizables.",
       en: "Interactive tool to evaluate password strength and generate secure keys, including random, memorable passwords, and PINs, with customizable options.",
     },
-    image: "src/components/img/generate.png",
+    image: "/img/generate.png",
     github: "https://github.com/NelsonVargas04/Password-generator",
     live: "https://password-generator-ef2lgj24k-nelsons-projects-c499b28f.vercel.app/",
-    technologies: ["React Native", "Redux", "Firebase"],
+    technologies: ["TypeScript", "React"],
   },
   {
     title: "Pet Selector",
@@ -61,10 +61,10 @@ const projectsData: Project[] = [
       es: "Aplicación intuitiva que permite seleccionar tu mascota preferida entre perros, gatos y peces. Incluye opciones detalladas y visuales para facilitar la elección.",
       en: "Intuitive application that lets you select your preferred pet among dogs, cats, and fish. It includes detailed and visual options to make the choice easier.",
     },
-    image: "src/components/img/mascotas.png",
+    image: "/img/mascotas.png",
     github: "https://github.com/NelsonVargas04/virtual-pet",
     live: "https://virtual-pet-eta.vercel.app/",
-    technologies: ["Angular", "TypeScript", "RxJS", "OpenWeatherMap API"],
+    technologies: ["TypeScript", "React"],
   },
 ];
 
