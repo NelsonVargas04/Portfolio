@@ -52,7 +52,7 @@ const projectsData: Project[] = [
     technologies: ["TypeScript", "React"],
   },
   {
-    title: "Pet Selector",
+    title: "Pet Selector ",
     description: {
       es: "Interfaz interactiva para elegir tu mascota favorita entre diferentes categorías.",
       en: "Interactive interface to choose your favorite pet from different categories.",
