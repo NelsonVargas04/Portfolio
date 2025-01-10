@@ -46,9 +46,9 @@ const projectsData: Project[] = [
       es: "Herramienta interactiva para evaluar la fortaleza de contraseñas y generar nuevas claves seguras, incluyendo contraseñas aleatorias, fáciles de recordar y PINs, con opciones personalizables.",
       en: "Interactive tool to evaluate password strength and generate secure keys, including random, memorable passwords, and PINs, with customizable options.",
     },
-    image:
-      "src/components/img/generate.png",
-    github: "https://github.com/nelsonvargas/task-management-app",
+    image: "src/components/img/generate.png",
+    github: "https://github.com/NelsonVargas04/Password-generator",
+    live: "https://password-generator-ef2lgj24k-nelsons-projects-c499b28f.vercel.app/",
     technologies: ["React Native", "Redux", "Firebase"],
   },
   {
@@ -61,10 +61,9 @@ const projectsData: Project[] = [
       es: "Aplicación intuitiva que permite seleccionar tu mascota preferida entre perros, gatos y peces. Incluye opciones detalladas y visuales para facilitar la elección.",
       en: "Intuitive application that lets you select your preferred pet among dogs, cats, and fish. It includes detailed and visual options to make the choice easier.",
     },
-    image:
-      "src/components/img/mascotas.png",
-    github: "https://github.com/nelsonvargas/weather-forecast-dashboard",
-    live: "https://weather-forecast-dashboard-demo.netlify.app",
+    image: "src/components/img/mascotas.png",
+    github: "https://github.com/NelsonVargas04/virtual-pet",
+    live: "https://virtual-pet-eta.vercel.app/",
     technologies: ["Angular", "TypeScript", "RxJS", "OpenWeatherMap API"],
   },
 ];
@@ -93,7 +92,7 @@ const Projects: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
         {projectsData.map((project, index) => (
           <div
             key={index}
-            className={`rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer ${darkMode ? "bg-gray-800" : "bg-gray-200"
+            className={`rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer flex flex-col ${darkMode ? "bg-gray-800" : "bg-gray-200"
               }`}
             onClick={() => setSelectedProject(index)}
           >
@@ -102,7 +101,7 @@ const Projects: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
               alt={project.title}
               className="w-full h-48 object-cover"
             />
-            <div className="p-4">
+            <div className="p-4 flex flex-col flex-grow">
               <h3
                 className={`text-2xl font-semibold mb-2 ${darkMode ? "text-[#edf6f9]" : "text-[#0D1321]"
                   }`}
@@ -127,38 +126,42 @@ const Projects: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className={`px-3 py-2 rounded-full text-sm ${darkMode ? "bg-blue-700 text-white" : "bg-blue-300 text-blue-800"
+                    className={`px-3 py-2 rounded-full text-sm ${darkMode
+                      ? "bg-blue-700 text-white"
+                      : "bg-blue-300 text-blue-800"
                       }`}
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between items-center">
-                <div className="flex space-x-4">
+              <div className="flex justify-between items-center mt-auto">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center ${darkMode
+                    ? "text-blue-400 hover:text-blue-300"
+                    : "text-blue-800 hover:text-blue-600"
+                    }`}
+                >
+                  <Github className="w-5 h-5 mr-1" />
+                  GitHub
+                </a>
+                {project.live && (
                   <a
-                    href={project.github}
+                    href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center ${darkMode ? "text-blue-400 hover:text-blue-300" : "text-blue-800 hover:text-blue-600"
+                    className={`flex items-center ${darkMode
+                      ? "text-green-400 hover:text-green-300"
+                      : "text-green-800 hover:text-green-600"
                       }`}
                   >
-                    <Github className="w-5 h-5 mr-1" />
-                    GitHub
+                    <Globe className="w-5 h-5 mr-1" />
+                    Live Demo
                   </a>
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex items-center ${darkMode ? "text-green-400 hover:text-green-300" : "text-green-800 hover:text-green-600"
-                        }`}
-                    >
-                      <Globe className="w-5 h-5 mr-1" />
-                      Live Demo
-                    </a>
-                  )}
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -199,7 +202,9 @@ const Projects: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
               {projectsData[selectedProject].technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className={`px-4 py-2 rounded-full text-base ${darkMode ? "bg-blue-700 text-white" : "bg-blue-300 text-blue-800"
+                  className={`px-4 py-2 rounded-full text-base ${darkMode
+                    ? "bg-blue-700 text-white"
+                    : "bg-blue-300 text-blue-800"
                     }`}
                 >
                   {tech}
@@ -211,7 +216,9 @@ const Projects: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
                 href={projectsData[selectedProject].github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center text-lg ${darkMode ? "text-blue-400 hover:text-blue-300" : "text-blue-800 hover:text-blue-600"
+                className={`flex items-center text-lg ${darkMode
+                  ? "text-blue-400 hover:text-blue-300"
+                  : "text-blue-800 hover:text-blue-600"
                   }`}
               >
                 <Github className="w-6 h-6 mr-1" />
@@ -222,7 +229,9 @@ const Projects: React.FC<{ darkMode: boolean }> = ({ darkMode }) => {
                   href={projectsData[selectedProject].live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center text-lg ${darkMode ? "text-green-400 hover:text-green-300" : "text-green-800 hover:text-green-600"
+                  className={`flex items-center text-lg ${darkMode
+                    ? "text-green-400 hover:text-green-300"
+                    : "text-green-800 hover:text-green-600"
                     }`}
                 >
                   <Globe className="w-6 h-6 mr-1" />
