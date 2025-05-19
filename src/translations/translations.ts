@@ -4,7 +4,7 @@ export const translations = {
     role: "Desarrollador de Software Profesional",
     aboutTitle: "Sobre Mí",
     aboutContent: [
-     "Soy un desarrollador Frontend con sólida experiencia en lenguajes como JavaScript y Python, especializado en el desarrollo de aplicaciones web y móviles, así como en el manejo de bases de datos SQL y NoSQL.",
+      "Soy un desarrollador Frontend con sólida experiencia en lenguajes como JavaScript y Python, especializado en el desarrollo de aplicaciones web y móviles, así como en el manejo de bases de datos SQL y NoSQL.",
       "Mi trayectoria incluye el uso de frameworks como React, donde he trabajado en proyectos que combinan funcionalidad, diseño y rendimiento.",
       "Me destaco por mi capacidad para resolver problemas de forma eficiente, adaptándome rápidamente a nuevos desafíos tecnológicos y colaborando en equipo para alcanzar objetivos comunes.",
       "Soy una persona social, alegre y apasionada por la tecnología, con un interés genuino en el aprendizaje continuo. Los retos me motivan, ya que veo en ellos la oportunidad de crecer profesionalmente y aportar un valor significativo a los proyectos en los que participo."
@@ -23,14 +23,14 @@ export const translations = {
         ]
       },
       {
-        title: "Teaching Assistant",
-        company: "Henry Bootcamp | Buenos Aires, Argentina",
-        period: "Noviembre 2022 - Febrero 2023",
+        title: "Desarrollador Frontend",
+        company: "Kayro Consultore | Caracas, Venezuela",
+        period: "Enero 2022 - Febrero 2023",
         responsibilities: [
-          "Coordinar a un grupo de estudiantes para lograr la integración al equipo de estudio.",
-          "Asistir a la resolución de ejercicios y promover la colaboración grupal (Pair Programming).",
-          "Proponer ideas para la mejora de los procesos del Bootcamp.",
-          "Enseñar conceptos básicos e intermedios de programación."
+          "Desarrollo de interfaces web responsivas utilizando tecnologías modernas como JavaScript y React.",
+          "Colaboración con equipos de diseño y backend para implementar soluciones funcionales y atractivas.",
+          "Optimización del rendimiento de aplicaciones y mantenimiento de código escalable.",
+          "Participación en proyectos de consultoría tecnológica, ofreciendo soluciones a clientes del sector privado."
         ]
       }
     ],
@@ -65,14 +65,14 @@ export const translations = {
         ]
       },
       {
-        title: "Teaching Assistant",
-        company: "Henry Bootcamp | Buenos Aires, Argentina",
-        period: "November 2022 - February 2023",
+        title: "Frontend Developer",
+        company: "Kayro Consultore | Caracas, Venezuela",
+        period: "January 2022 - February 2023",
         responsibilities: [
-          "Coordinate a group of students to achieve integration into the study team.",
-          "Assist in solving exercises and promote group collaboration (Pair Programming).",
-          "Propose ideas for improving Bootcamp processes.",
-          "Teach basic and intermediate programming concepts."
+          "Developed responsive web interfaces using modern technologies like JavaScript and React.",
+          "Collaborated with design and backend teams to implement functional and attractive solutions.",
+          "Optimized application performance and maintained scalable code.",
+          "Participated in technology consulting projects, delivering solutions to private sector clients."
         ]
       }
     ],
