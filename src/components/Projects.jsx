@@ -1,0 +1,44 @@
+import { useI18n } from '../i18n.jsx';
+
+function SplitAppPreview() {
+  return (
+    <img
+      src="/splitapp.png"
+      alt="SplitApp"
+      style={{
+        width: '100%', height: '100%',
+        objectFit: 'cover', borderRadius: '8px',
+        display: 'block'
+      }}
+    />
+  );
+}
+
+export default function Projects() {
+  const { t } = useI18n();
+  const projects = [
+    { category: t.projects.category1, name: t.projects.name1, desc: t.projects.desc1, preview: <SplitAppPreview /> },
+    { category: t.projects.category2, name: t.projects.name2, desc: t.projects.desc2, preview: null },
+    { category: t.projects.category3, name: t.projects.name3, desc: t.projects.desc3, preview: null },
+  ];
+  return (
+    <section id="proyectos" className="projects">
+      <h2 className="section-title">{t.projects.title}</h2>
+      <div className="projects-grid">
+        {projects.map((p, i) => (
+          <article className="project-item" key={i}>
+            <div className="project-image">
+              {p.preview}
+            </div>
+            <div className="project-info">
+              <div className="project-category">{p.category}</div>
+              <h3>{p.name}</h3>
+              <p className="project-description">{p.desc}</p>
+              <a href="#" className="project-link">{t.projects.link}</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
