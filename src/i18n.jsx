@@ -7,10 +7,11 @@ const translations = {
     hero: { name: 'Nelson Vargas', subtitle: 'Software Engineering Team Lead | Fullstack Developer' },
     projects: {
       title: 'Selected Projects',
-      category1: 'Mobile App', name1: 'SplitApp', desc1: 'Expense splitting app that automatically calculates who owes what. Organize dinners, trips, rent and more. Notifies you when you get paid.',
-      category2: 'Development', name2: 'Project Name 02', desc2: 'Description of the second project highlighting unique features and added value. Mentions key technologies used.',
-      category3: 'Branding', name3: 'Project Name 03', desc3: 'The third project that demonstrates your versatility and expertise. Shares the results obtained and the impact of the work done.',
-      link: 'View project'
+      category1: 'E-commerce', name1: 'Shop.ar', desc1: 'E-commerce platform to compare quality products in clothing, appliances, and technology. Features product management, cart, and payments.',
+      category2: 'Mobile App', name2: 'SplitApp', desc2: 'Expense splitting app that automatically calculates who owes what. Organize dinners, trips, rent and more. Notifies you when you get paid.',
+      category3: 'Development', name3: 'Project Name 03', desc3: 'The third project that demonstrates your versatility and expertise. Shares the results obtained and the impact of the work done.',
+      link: 'View project',
+      github: 'GitHub'
     },
     about: {
       title: 'About Me',
@@ -53,10 +54,11 @@ const translations = {
     hero: { name: 'Nelson Vargas', subtitle: 'Software Engineering Team Lead | Fullstack Developer' },
     projects: {
       title: 'Proyectos Seleccionados',
-      category1: 'App Móvil', name1: 'SplitApp', desc1: 'App para dividir gastos que calcula automáticamente quién debe qué. Organizá cenas, viajes, alquileres y más. Te avisa cuando te pagan.',
-      category2: 'Desarrollo', name2: 'Nombre del Proyecto 02', desc2: 'Descripción del segundo proyecto destacando las características únicas y el valor agregado. Menciona las tecnologías clave utilizadas.',
-      category3: 'Branding', name3: 'Nombre del Proyecto 03', desc3: 'El tercer proyecto que demuestra tu versatilidad y expertise. Comparte los resultados obtenidos y el impacto del trabajo realizado.',
-      link: 'Ver proyecto'
+      category1: 'E-commerce', name1: 'Shop.ar', desc1: 'Plataforma de e-commerce para comparar productos de calidad en ropa, electrodomésticos y tecnología. Incluye gestión de productos, carrito y pagos.',
+      category2: 'App Móvil', name2: 'SplitApp', desc2: 'App para dividir gastos que calcula automáticamente quién debe qué. Organizá cenas, viajes, alquileres y más. Te avisa cuando te pagan.',
+      category3: 'Desarrollo', name3: 'Nombre del Proyecto 03', desc3: 'El tercer proyecto que demuestra tu versatilidad y expertise. Comparte los resultados obtenidos y el impacto del trabajo realizado.',
+      link: 'Ver proyecto',
+      github: 'GitHub'
     },
     about: {
       title: 'Sobre Mí',

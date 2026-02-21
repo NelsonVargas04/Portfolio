@@ -454,6 +454,26 @@ nav a:hover::after {
   transition: transform 0.3s ease;
 }
 
+.project-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.github-link {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.github-link:hover {
+  color: var(--primary-bg);
+  background-color: var(--accent);
+}
+
+.github-link::after {
+  content: '';
+}
+
 /* About Section */
 .about {
   padding: 8rem 0;

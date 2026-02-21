@@ -1,5 +1,19 @@
 import { useI18n } from '../i18n.jsx';
 
+function ShopARPreview() {
+  return (
+    <img
+      src="/shop.ar.png"
+      alt="Shop.ar"
+      style={{
+        width: '100%', height: '100%',
+        objectFit: 'cover', borderRadius: '8px',
+        display: 'block'
+      }}
+    />
+  );
+}
+
 function SplitAppPreview() {
   return (
     <img
@@ -17,9 +31,9 @@ function SplitAppPreview() {
 export default function Projects() {
   const { t } = useI18n();
   const projects = [
-    { category: t.projects.category1, name: t.projects.name1, desc: t.projects.desc1, preview: <SplitAppPreview /> },
-    { category: t.projects.category2, name: t.projects.name2, desc: t.projects.desc2, preview: null },
-    { category: t.projects.category3, name: t.projects.name3, desc: t.projects.desc3, preview: null },
+    { category: t.projects.category1, name: t.projects.name1, desc: t.projects.desc1, preview: <ShopARPreview />, url: 'https://shop-ar-demo.com', github: 'https://github.com/nvargasdev/shop.ar' },
+    { category: t.projects.category2, name: t.projects.name2, desc: t.projects.desc2, preview: <SplitAppPreview />, url: 'https://splitapp-demo.com', github: 'https://github.com/nvargasdev/splitapp' },
+    { category: t.projects.category3, name: t.projects.name3, desc: t.projects.desc3, preview: null, url: '#', github: '#' },
   ];
   return (
     <section id="proyectos" className="projects">
@@ -34,7 +48,10 @@ export default function Projects() {
               <div className="project-category">{p.category}</div>
               <h3>{p.name}</h3>
               <p className="project-description">{p.desc}</p>
-              <a href="#" className="project-link">{t.projects.link}</a>
+              <div className="project-links">
+                <a href={p.url} target="_blank" rel="noopener noreferrer" className="project-link">{t.projects.link}</a>
+                <a href={p.github} target="_blank" rel="noopener noreferrer" className="project-link github-link">{t.projects.github}</a>
+              </div>
             </div>
           </article>
         ))}
