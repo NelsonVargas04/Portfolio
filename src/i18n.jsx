@@ -9,7 +9,7 @@ const translations = {
       title: 'Selected Projects',
       category1: 'E-commerce', name1: 'Shop.ar', desc1: 'E-commerce platform to compare quality products in clothing, appliances, and technology. Features product management, cart, and payments.',
       category2: 'Mobile App', name2: 'SplitApp', desc2: 'Expense splitting app that automatically calculates who owes what. Organize dinners, trips, rent and more. Notifies you when you get paid.',
-      category3: 'Development', name3: 'Project Name 03', desc3: 'The third project that demonstrates your versatility and expertise. Shares the results obtained and the impact of the work done.',
+      category3: 'Security', name3: 'Pass Key', desc3: 'Password generator application with advanced customization options. Generates strong, secure passwords with various character types and lengths.',
       link: 'View project',
       github: 'GitHub'
     },
@@ -56,7 +56,7 @@ const translations = {
       title: 'Proyectos Seleccionados',
       category1: 'E-commerce', name1: 'Shop.ar', desc1: 'Plataforma de e-commerce para comparar productos de calidad en ropa, electrodomésticos y tecnología. Incluye gestión de productos, carrito y pagos.',
       category2: 'App Móvil', name2: 'SplitApp', desc2: 'App para dividir gastos que calcula automáticamente quién debe qué. Organizá cenas, viajes, alquileres y más. Te avisa cuando te pagan.',
-      category3: 'Desarrollo', name3: 'Nombre del Proyecto 03', desc3: 'El tercer proyecto que demuestra tu versatilidad y expertise. Comparte los resultados obtenidos y el impacto del trabajo realizado.',
+      category3: 'Seguridad', name3: 'Pass Key', desc3: 'Aplicación generadora de contraseñas con opciones avanzadas de personalización. Genera contraseñas fuertes y seguras con varios tipos de caracteres y longitudes.',
       link: 'Ver proyecto',
       github: 'GitHub'
     },

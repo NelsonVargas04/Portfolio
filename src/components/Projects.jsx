@@ -28,12 +28,26 @@ function SplitAppPreview() {
   );
 }
 
+function PassKeyPreview() {
+  return (
+    <img
+      src="/PassKey.png"
+      alt="PassKey"
+      style={{
+        width: '100%', height: '100%',
+        objectFit: 'cover', borderRadius: '8px',
+        display: 'block'
+      }}
+    />
+  );
+}
+
 export default function Projects() {
   const { t } = useI18n();
   const projects = [
-    { category: t.projects.category1, name: t.projects.name1, desc: t.projects.desc1, preview: <ShopARPreview />, url: 'https://shop-ar-demo.com', github: 'https://github.com/nvargasdev/shop.ar' },
+    { category: t.projects.category1, name: t.projects.name1, desc: t.projects.desc1, preview: <ShopARPreview />, url: 'https://shop-ro6blzxvv-nelsons-projects-c499b28f.vercel.app/', github: 'https://github.com/NelsonVargas04/shop.ar' },
     { category: t.projects.category2, name: t.projects.name2, desc: t.projects.desc2, preview: <SplitAppPreview />, url: 'https://splitapp-demo.com', github: 'https://github.com/nvargasdev/splitapp' },
-    { category: t.projects.category3, name: t.projects.name3, desc: t.projects.desc3, preview: null, url: '#', github: '#' },
+    { category: t.projects.category3, name: t.projects.name3, desc: t.projects.desc3, preview: <PassKeyPreview />, url: 'https://password-generator-3kjsq6wg3-nelsons-projects-c499b28f.vercel.app', github: 'https://github.com/NelsonVargas04/Password-generator' },
   ];
   return (
     <section id="proyectos" className="projects">
