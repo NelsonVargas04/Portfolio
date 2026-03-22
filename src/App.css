@@ -5,7 +5,7 @@
   --bg3:     #141420;
   --line:    #1c1c2c;
   --line2:   #282838;
-  --text:    #e8e4da;
+  --text:    #e3dfdf;
   --text2:   #9090a0;
   --muted:   #484858;
   --accent:  #d4a017;
@@ -373,21 +373,26 @@ nav {
   font-size: 17px;
   line-height: 1.85;
   color: var(--text);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 28px;
   transition: color .35s;
 }
 
 .about-bio strong { font-weight: 500; }
 
-.about-quote {
+blockquote.about-quote {
   font-size: 14px;
-  color: var(--text2);
+  color: inherit !important;
   font-style: italic;
   border-left: 2px solid var(--accent);
   padding-left: 16px;
   line-height: 1.75;
-  transition: color .35s;
+  margin: 0;
+}
+
+#about .about-quote,
+#about blockquote {
+  color: var(--text) !important;
 }
 
 .about-side { display: flex; flex-direction: column; }
@@ -480,7 +485,7 @@ nav {
 
 .exp-bullets li {
   font-size: 15px;
-  color: var(--text2);
+  color: var(--text);
   padding-left: 14px;
   position: relative;
   line-height: 1.72;
@@ -614,7 +619,7 @@ nav {
 
 .proj-desc {
   font-size: 14px;
-  color: var(--text2);
+  color: var(--text);
   line-height: 1.75;
   font-weight: 300;
   margin-bottom: 14px;
@@ -697,7 +702,7 @@ nav {
 
 .contact-note {
   font-size: 15px;
-  color: var(--text2);
+  color: var(--text);
   line-height: 1.8;
   font-weight: 300;
   transition: color .35s;
