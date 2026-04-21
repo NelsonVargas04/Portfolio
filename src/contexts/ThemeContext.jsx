@@ -6,7 +6,7 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.body.classList.toggle('light', theme === 'light');
     localStorage.setItem('theme', theme);
   }, [theme]);
 

@@ -1,1 +1,69 @@
-/* Global reset - portfolio styles are in App.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap');
+
+/* ===== DARK (default) ===== */
+:root {
+  --bg:     #12121a;
+  --bg2:    #1a1a26;
+  --fg:     #f0ede6;
+  --muted:  #7a7886;
+  --accent: #c1c101;
+  --border: rgba(240, 237, 230, 0.08);
+
+  --text-body:  rgba(240, 237, 230, 0.75);   /* párrafos */
+  --text-dim:   rgba(240, 237, 230, 0.72);   /* bullets */
+  --text-dim2:  rgba(240, 237, 230, 0.6);    /* proj desc */
+  --stroke:     rgba(240, 237, 230, 0.2);    /* hero outline stroke */
+  --info-hover: #161622;                     /* proj info hover bg */
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+}
+
+/* ===== LIGHT ===== */
+body.light {
+  --bg:     #ffffff;
+  --bg2:    #f0f0f0;
+  --fg:     #0e0e14;
+  --muted:  #888898;
+  --accent: #f5c518;
+  --border: rgba(14, 14, 20, 0.1);
+
+  --text-body:  rgba(14, 14, 20, 0.65);
+  --text-dim:   rgba(14, 14, 20, 0.6);
+  --text-dim2:  rgba(14, 14, 20, 0.55);
+  --stroke:     rgba(14, 14, 20, 0.15);
+  --info-hover: #f8f8f8;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: var(--border); }
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible     { opacity: 1; transform: none; }
+.reveal-delay-1     { transition-delay: 0.1s; }
+.reveal-delay-2     { transition-delay: 0.2s; }
+.reveal-delay-3     { transition-delay: 0.3s; }
+.reveal-delay-4     { transition-delay: 0.4s; }

@@ -1,25 +1,25 @@
 import { SKILLS } from '../../models/skills.js';
 
-function TickerRow() {
+function MarqueeRow() {
   return (
-    <div className="ticker-item">
+    <span>
       {SKILLS.map((s, i) => (
-        <span key={i}>
+        <span key={i} className="marquee-item">
           {s}
-          {i < SKILLS.length - 1 && <span className="ticker-sep"> ✦ </span>}
+          {i < SKILLS.length - 1 && <span className="marquee-sep">✦</span>}
         </span>
       ))}
-    </div>
+    </span>
   );
 }
 
 export default function Ticker() {
   return (
-    <div className="ticker-section">
-      <div className="ticker-track">
-        <div className="ticker-inner">
-          <TickerRow />
-          <TickerRow />
+    <div className="marquee-section">
+      <div className="marquee-track">
+        <div className="marquee-inner">
+          <MarqueeRow />
+          <MarqueeRow />
         </div>
       </div>
     </div>

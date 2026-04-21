@@ -54,8 +54,8 @@ const translations = {
     contact: {
       label: 'Get in touch',
       title: 'Let\'s build something <em>great</em>',
-      big: 'Open to<br>new <em>ideas.</em>',
-      note: '',
+      tagline: 'Open to new opportunities, collaborations and interesting ideas.',
+      big: 'OPEN TO /<br>NEW <em>IDEAS.</em>',
       linkedinSub: 'Connect professionally',
       githubSub: 'See the code',
     },
@@ -114,8 +114,8 @@ const translations = {
     contact: {
       label: 'Contacto',
       title: 'Construyamos algo <em>grande</em>',
-      big: 'Abierto<br>a nuevas <em>ideas.</em>',
-      note: '',
+      tagline: 'Abierto a nuevas oportunidades, colaboraciones e ideas interesantes.',
+      big: 'ABIERTO /<br>A NUEVAS <em>IDEAS.</em>',
       linkedinSub: 'Conectar profesionalmente',
       githubSub: 'Ver el código',
     },

@@ -1,5 +1,5 @@
 export const EXPERIENCE = {
-  dateStart: '2023',
+  dateStart: '2022',
   company: 'Vela One',
   location: 'California, USA',
   stack: [

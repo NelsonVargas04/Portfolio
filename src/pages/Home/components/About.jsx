@@ -1,17 +1,22 @@
+import { useScrollReveal } from '../../../hooks/useScrollReveal.js';
+
 export default function About({ about }) {
+  const ref = useScrollReveal();
+
   return (
-    <section id="about" className="section">
-      <div className="sec-header">
+    <section id="about" className="section" ref={ref}>
+      <div className="reveal">
         <div className="sec-label">{about.label}</div>
         <h2 className="sec-title" dangerouslySetInnerHTML={{ __html: about.title }} />
       </div>
+
       <div className="about-grid">
-        <div>
+        <div className="reveal reveal-delay-1">
           <p className="about-bio" dangerouslySetInnerHTML={{ __html: about.bio }} />
-          <br />
           <blockquote className="about-quote">{about.quote}</blockquote>
         </div>
-        <div className="about-side">
+
+        <div className="about-stats reveal reveal-delay-2">
           <div className="about-stat">
             <div className="about-stat-n">3<em>+</em></div>
             <div className="about-stat-l">{about.stat1}</div>
@@ -20,7 +25,7 @@ export default function About({ about }) {
             <div className="about-stat-n">20<em>+</em></div>
             <div className="about-stat-l">{about.stat2}</div>
           </div>
-          <div className="about-stat">
+          <div className="about-stat full">
             <div className="about-stat-n">JS</div>
             <div className="about-stat-l">{about.stat3}</div>
           </div>

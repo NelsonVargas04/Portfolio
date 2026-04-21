@@ -20,23 +20,12 @@ export default function Home() {
 
   return (
     <>
-      <Header
-        nav={t.nav}
-        lang={lang}
-        onSwitchLang={switchLang}
-        theme={theme}
-        onToggleTheme={toggleTheme}
-      />
+      <Header nav={t.nav} lang={lang} onSwitchLang={switchLang} theme={theme} onToggleTheme={toggleTheme} />
       <Hero hero={t.hero} />
       <Ticker />
       <About about={t.about} />
       <Experience experience={{ ...experience, label: t.experience.label, title: t.experience.title }} />
-      <Projects
-        projects={projects}
-        label={t.projects.label}
-        title={t.projects.title}
-        linkLabel={t.projects.link}
-      />
+      <Projects projects={projects} label={t.projects.label} title={t.projects.title} linkLabel={t.projects.link} />
       <Contact contact={t.contact} />
       <Footer footerText={t.footer} />
     </>
