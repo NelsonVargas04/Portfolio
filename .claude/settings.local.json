@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/c/Proyectos/Personales/HUNTBOARD/src/components/**)",
+      "Read(//mnt/c/Proyectos/Personales/HUNTBOARD/src/**)"
+    ]
+  }
+}
