@@ -1,55 +1,33 @@
 import { useState } from 'react';
 import { useScrollReveal } from '../../../hooks/useScrollReveal.js';
 
-function BrowserMock({ img, alt, name }) {
+function ProjCard({ p, linkLabel }) {
   const [imgError, setImgError] = useState(false);
+
   return (
-    <div className="proj-browser">
-      <div className="browser-bar">
-        <div className="browser-dot" style={{ background: '#ff5f56' }} />
-        <div className="browser-dot" style={{ background: '#ffbd2e' }} />
-        <div className="browser-dot" style={{ background: '#27c93f' }} />
-        <div className="browser-url" />
-      </div>
-      <div className="browser-body">
+    <div className="proj-card">
+      <div className="proj-card-img">
         {!imgError
-          ? <img src={img} alt={alt} onError={() => setImgError(true)} />
+          ? <img src={p.img} alt={p.name + p.nameEm} onError={() => setImgError(true)} />
           : (
-            <div className="browser-placeholder">
-              <span className="browser-placeholder-label">{name}</span>
+            <div className="proj-card-placeholder">
+              <span>{p.name}{p.nameEm}</span>
             </div>
           )
         }
+        <span className="proj-card-badge">{p.cat}</span>
       </div>
-    </div>
-  );
-}
-
-function ProjCard({ p, linkLabel }) {
-  const preview = (
-    <div className="proj-preview">
-      <BrowserMock img={p.img} alt={p.name + p.nameEm} name={p.name + p.nameEm} />
-    </div>
-  );
-
-  const info = (
-    <div className="proj-info">
-      <span className="proj-badge">{p.cat}</span>
-      <div className="proj-name">{p.name}{p.nameEm}</div>
-      <p className="proj-desc">{p.desc}</p>
-      <div className="proj-tags">
-        {p.tags.map(tag => <span className="proj-tag" key={tag}>{tag}</span>)}
+      <div className="proj-card-body">
+        <div className="proj-card-name">{p.name}<em>{p.nameEm}</em></div>
+        <p className="proj-card-desc">{p.desc}</p>
+        <div className="proj-card-tags">
+          {p.tags.map(tag => <span className="proj-tag" key={tag}>{tag}</span>)}
+        </div>
+        <div className="proj-card-actions">
+          <a href={p.url} target="_blank" rel="noopener noreferrer" className="btn-primary">{linkLabel} →</a>
+          <a href={p.github} target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
+        </div>
       </div>
-      <div className="proj-actions">
-        <a href={p.url} target="_blank" rel="noopener noreferrer" className="btn-primary">{linkLabel} →</a>
-        <a href={p.github} target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub</a>
-      </div>
-    </div>
-  );
-
-  return (
-    <div className="proj-row">
-      {p.alt ? <>{info}{preview}</> : <>{preview}{info}</>}
     </div>
   );
 }
@@ -63,7 +41,7 @@ export default function Projects({ projects, label, title, linkLabel }) {
         <div className="sec-label">{label}</div>
         <h2 className="sec-title" dangerouslySetInnerHTML={{ __html: title }} />
       </div>
-      <div className="proj-list">
+      <div className="proj-grid">
         {projects.map((p, i) => (
           <div key={i} className={`reveal reveal-delay-${Math.min(i + 1, 4)}`}>
             <ProjCard p={p} linkLabel={linkLabel} />
