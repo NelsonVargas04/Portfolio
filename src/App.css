@@ -308,7 +308,7 @@ body.light nav { background: rgba(255, 255, 255, 0.9); }
 
 /* ===== SHARED SECTION ===== */
 .section {
-  padding: 120px 48px;
+  padding: 210px 57px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -529,6 +529,16 @@ body.light .exp-tab.active { background: rgba(245, 197, 24, 0.06); }
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 64px;
+  align-items: stretch;
+}
+
+.proj-grid > * {
+  display: flex;
+  height: 100%;
+}
+
+.proj-grid > * > .proj-card {
+  width: 100%;
 }
 
 .proj-card {
@@ -536,13 +546,30 @@ body.light .exp-tab.active { background: rgba(245, 197, 24, 0.06); }
   border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  transition: background 0.2s, border-color 0.2s;
+  transition: border-color 0.3s;
   position: relative;
+  overflow: hidden;
+  will-change: transform;
 }
 
 .proj-card:hover { border-color: var(--accent); }
 
-.proj-card:hover { background: var(--info-hover); }
+.proj-card-glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.proj-card:hover .proj-card-glow { opacity: 1; }
+
+.proj-card-img,
+.proj-card-body {
+  position: relative;
+  z-index: 1;
+}
 
 .proj-card-img {
   position: relative;
@@ -556,7 +583,7 @@ body.light .exp-tab.active { background: rgba(245, 197, 24, 0.06); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   display: block;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -608,17 +635,17 @@ body.light .exp-tab.active { background: rgba(245, 197, 24, 0.06); }
 
 .proj-card-name {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 28px;
   text-transform: uppercase;
   color: var(--fg);
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .proj-card-name em { color: var(--accent); font-style: normal; }
 
 .proj-card-desc {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   color: var(--text-dim2);
   line-height: 1.7;
@@ -756,14 +783,20 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 48px;
+  padding: 40px 57px;
   border-top: 1px solid var(--border);
   background: var(--bg);
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
+}
+
+.footer-version {
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  font-weight: 600;
 }
 
 /* ===== GRAIN ===== */

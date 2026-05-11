@@ -46,9 +46,11 @@ const translations = {
       category1: 'E-Commerce',
       category2: 'Landing Page',
       category3: 'Tool',
+      category4: 'Job Tracker',
       desc1: 'E-commerce platform to compare quality products in clothing, appliances, and technology. Full product management, cart, and payment flows.',
       desc2: 'Expense splitting app that automatically calculates who owes what. Organize dinners, trips, rent and more. Notifies you when you get paid.',
       desc3: 'Generates strong, secure passwords with various character types and lengths. Minimal UI focused entirely on function and speed.',
+      desc4: 'A logbook for your job hunt. Track every application, see your real response rate, conversion funnel and ghosting analytics. Manage CVs and cover letters in one place.',
       link: 'View project',
     },
     contact: {
@@ -106,9 +108,11 @@ const translations = {
       category1: 'E-Commerce',
       category2: 'Landing Page',
       category3: 'Herramienta',
+      category4: 'Job Tracker',
       desc1: 'Plataforma de e-commerce para comparar productos de calidad. Gestión de productos, carrito y pagos completos.',
       desc2: 'App para dividir gastos que calcula automáticamente quién debe qué. Organizá cenas, viajes, alquileres y más.',
       desc3: 'Genera contraseñas fuertes y seguras con varios tipos de caracteres. UI minimalista enfocada en función y velocidad.',
+      desc4: 'Una bitácora para tu búsqueda laboral. Trackeá cada aplicación, ve tu tasa de respuesta real, embudo de conversión y análisis de ghosting. Gestioná CVs y cover letters en un solo lugar.',
       link: 'Ver proyecto',
     },
     contact: {

@@ -1,32 +1,60 @@
-import { useScrollReveal } from '../../../hooks/useScrollReveal.js';
+import { motion } from 'framer-motion';
+import { Reveal, RevealGroup, RevealItem, fadeUp, fadeLeft, fadeRight } from '../../../components/Motion.jsx';
+import AnimatedTitle from '../../../components/AnimatedTitle.jsx';
+
+const bullet = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+};
+const tag = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } },
+};
 
 export default function Experience({ experience }) {
   const { dateStart, present, company, location, stack, role, bullets, label, title } = experience;
-  const ref = useScrollReveal();
 
   return (
-    <section id="experience" className="section" ref={ref}>
-      <div className="reveal">
+    <section id="experience" className="section">
+      <Reveal>
         <div className="sec-label">{label}</div>
-        <h2 className="sec-title" dangerouslySetInnerHTML={{ __html: title }} />
-      </div>
+      </Reveal>
+      <AnimatedTitle html={title} className="sec-title" />
 
       <div className="exp-layout">
-        <div className="exp-tabs reveal reveal-delay-1">
+        <Reveal variant={fadeLeft} className="exp-tabs">
           <button className="exp-tab active">{company}</button>
-        </div>
+        </Reveal>
 
-        <div className="reveal reveal-delay-2">
+        <Reveal variant={fadeRight}>
           <div className="exp-content-title">{role}</div>
           <div className="exp-content-company">{company} — {location}</div>
           <div className="exp-content-period">{dateStart} — {present}</div>
-          <ul className="exp-bullets">
-            {bullets.map((b, i) => <li key={i}>{b}</li>)}
-          </ul>
-          <div className="exp-stack-tags">
-            {stack.map(s => <span className="exp-stack-tag" key={s}>{s}</span>)}
-          </div>
-        </div>
+
+          <motion.ul
+            className="exp-bullets"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }}
+          >
+            {bullets.map((b, i) => (
+              <motion.li key={i} variants={bullet}>{b}</motion.li>
+            ))}
+          </motion.ul>
+
+          <motion.div
+            className="exp-stack-tags"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.04 } } }}
+          >
+            {stack.map((s) => (
+              <motion.span className="exp-stack-tag" key={s} variants={tag}>{s}</motion.span>
+            ))}
+          </motion.div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,5 +1,19 @@
 export const PROJECTS = [
   {
+    name: 'Track',
+    nameEm: 'book',
+    tags: ['React 19', 'TypeScript', 'Supabase', 'Tailwind'],
+    url: 'https://trackbook-3qzb.vercel.app/',
+    github: 'https://github.com/NelsonVargas04/TRACKBOOK',
+    img: '/trackbook.png',
+    imgFit: 'contain',
+    accent: 'rgba(139,92,246,.35)',
+    alt: false,
+    // i18n keys resolved by useProjects hook
+    categoryKey: 'category4',
+    descKey: 'desc4',
+  },
+  {
     name: 'Shop',
     nameEm: '.ar',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Sequelize'],
@@ -7,8 +21,7 @@ export const PROJECTS = [
     github: 'https://github.com/NelsonVargas04/shop.ar',
     img: '/shop.ar.png',
     accent: 'rgba(212,160,23,.3)',
-    alt: false,
-    // i18n keys resolved by useProjects hook
+    alt: true,
     categoryKey: 'category1',
     descKey: 'desc1',
   },
@@ -20,7 +33,7 @@ export const PROJECTS = [
     github: 'https://github.com/NelsonVargas04/page-splitter',
     img: '/splitapp.png',
     accent: 'rgba(100,120,200,.35)',
-    alt: true,
+    alt: false,
     categoryKey: 'category2',
     descKey: 'desc2',
   },
@@ -32,7 +45,7 @@ export const PROJECTS = [
     github: 'https://github.com/NelsonVargas04/Password-generator',
     img: '/PassKey.png',
     accent: 'rgba(60,140,100,.35)',
-    alt: false,
+    alt: true,
     categoryKey: 'category3',
     descKey: 'desc3',
   },

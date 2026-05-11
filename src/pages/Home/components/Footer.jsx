@@ -1,8 +1,8 @@
-export default function Footer({ footerText }) {
+export default function Footer() {
   return (
     <footer>
       <span>Nelson Vargas 2025</span>
-      <span>{footerText}</span>
+      <span className="footer-version">VER {__APP_VERSION__}</span>
     </footer>
   );
 }

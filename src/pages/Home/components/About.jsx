@@ -1,35 +1,34 @@
-import { useScrollReveal } from '../../../hooks/useScrollReveal.js';
+import { Reveal, RevealGroup, RevealItem, fadeLeft, scaleIn } from '../../../components/Motion.jsx';
+import AnimatedTitle from '../../../components/AnimatedTitle.jsx';
 
 export default function About({ about }) {
-  const ref = useScrollReveal();
-
   return (
-    <section id="about" className="section" ref={ref}>
-      <div className="reveal">
+    <section id="about" className="section">
+      <Reveal>
         <div className="sec-label">{about.label}</div>
-        <h2 className="sec-title" dangerouslySetInnerHTML={{ __html: about.title }} />
-      </div>
+      </Reveal>
+      <AnimatedTitle html={about.title} className="sec-title" />
 
       <div className="about-grid">
-        <div className="reveal reveal-delay-1">
+        <Reveal variant={fadeLeft}>
           <p className="about-bio" dangerouslySetInnerHTML={{ __html: about.bio }} />
           <blockquote className="about-quote">{about.quote}</blockquote>
-        </div>
+        </Reveal>
 
-        <div className="about-stats reveal reveal-delay-2">
-          <div className="about-stat">
+        <RevealGroup className="about-stats">
+          <RevealItem variant={scaleIn} className="about-stat">
             <div className="about-stat-n">3<em>+</em></div>
             <div className="about-stat-l">{about.stat1}</div>
-          </div>
-          <div className="about-stat">
+          </RevealItem>
+          <RevealItem variant={scaleIn} className="about-stat">
             <div className="about-stat-n">20<em>+</em></div>
             <div className="about-stat-l">{about.stat2}</div>
-          </div>
-          <div className="about-stat full">
+          </RevealItem>
+          <RevealItem variant={scaleIn} className="about-stat full">
             <div className="about-stat-n">JS</div>
             <div className="about-stat-l">{about.stat3}</div>
-          </div>
-        </div>
+          </RevealItem>
+        </RevealGroup>
       </div>
     </section>
   );

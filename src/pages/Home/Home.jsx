@@ -27,7 +27,7 @@ export default function Home() {
       <Experience experience={{ ...experience, label: t.experience.label, title: t.experience.title }} />
       <Projects projects={projects} label={t.projects.label} title={t.projects.title} linkLabel={t.projects.link} />
       <Contact contact={t.contact} />
-      <Footer footerText={t.footer} />
+      <Footer />
     </>
   );
 }
